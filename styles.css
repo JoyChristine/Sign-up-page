@@ -23,11 +23,12 @@ body,
     position: absolute;
     width: 2400px;
     height: 2400px;
-    border-radius: 33%;
+    border-radius: 50%;
     background: linear-gradient(-45deg, #333, #181717);
-    bottom: -12%;
-    right: 40%;
-    /* transform: translateX(-50deg); */
+    top: -10%;
+    right: 45%;
+    transition: 2s ease-in-out;
+    transform: translateY(-50%);
 }
 
 .forms-container {
@@ -191,6 +192,7 @@ form.sign-up-form {
 .panels-container .content {
     color: #aaa;
     padding: 1.5rem 0;
+    transition: .9s .6s ease-in-out;
 }
 
 .panels-container h3 {
@@ -215,9 +217,25 @@ form.sign-up-form {
 
 .image {
     width: 100%;
+    transition: 2s .3s ease-in-out;
 }
 
 .panel-right .content,
 .panel-right .image {
     transform: translateX(800px);
+}
+
+
+/* Animation */
+
+.container.sign-up-mode:before {
+    transform: translate(100%, -50%);
+    right: 52%;
+    background: linear-gradient(-45deg, #3E3E3E, #A2A2A2);
+    transition: 1.5s;
+}
+
+.container.sign-up-mode .panel-left .image,
+.container.sign-up-mode .panel-left .content {
+    transform: translateX(-700px);
 }
